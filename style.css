@@ -50,6 +50,7 @@ body {
 .nav__link {
   text-decoration: none;
   color: rgb(27, 27, 27);
+  justify-self: center;
 }
 
 .nav__link:hover {
@@ -64,6 +65,8 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
+  max-width: 576px;
+  margin: 0 auto;
 }
 
 .grid__column {
@@ -113,4 +116,16 @@ body {
 
 .card__detail--price--red {
   background-color: rgb(236, 98, 116);
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 992px;
+    gap: 1rem;
+  }
+
+  .grid__column {
+    align-self: start;
+  }
 }
